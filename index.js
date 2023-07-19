@@ -26,27 +26,42 @@
 // console.log(grade);
 
 // ROCK AND PAPER
-let playerOne = "rock";
-let computer = "paper";
+// let playerOne = "rock";
+// let computer = "paper";
 
-if (playerOne === computer) {
-  //tie game
-} else if (playerOne === "rock") {
-  if (computer === "paper") {
-    //computer win
-  } else {
-    // playerOne wins
-  }
-} else if (playerOne === "paper") {
-  if (computer === "scissors") {
-    //computer win
-  } else {
-    // playerOne wins
-  }
-} else {
-  if (computer === "rock") {
-    // computer wins
-  } else {
-    // player wins
-  }
+// if (playerOne === computer) {
+//   //tie game
+// } else if (playerOne === "rock") {
+//   if (computer === "paper") {
+//     //computer win
+//   } else {
+//     // playerOne wins
+//   }
+// } else if (playerOne === "paper") {
+//   if (computer === "scissors") {
+//     //computer win
+//   } else {
+//     // playerOne wins
+//   }
+// } else {
+//   if (computer === "rock") {
+//     // computer wins
+//   } else {
+//     // player wins
+//   }
+// }
+
+// SWITCH STATEMENT
+switch ("2") {
+  case 1:
+    break;
+
+  case 2:
+    break;
+
+  case 3:
+    break;
+
+  default:
+    console.log("No match");
 }
