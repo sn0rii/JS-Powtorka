@@ -1,1 +1,2 @@
-console.log("Wojtek".charAt(Math.floor(Math.random() * 6)));
+let name = "Wojtek";
+console.log(name.charAt(Math.floor(Math.random() * name.length)));
