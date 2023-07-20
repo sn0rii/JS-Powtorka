@@ -122,17 +122,30 @@
 //     : "F";
 // console.log(`My test grade is a ${myGrade}.`);
 
-let playerOne = "scissors";
-let computer = "paper";
+// let playerOne = "scissors";
+// let computer = "paper";
 
-let result =
-  playerOne === computer
-    ? "Tie game!"
-    : playerOne === "rock" && computer === "paper"
-    ? "Computer wins!"
-    : playerOne === "paper" && computer === "scissors"
-    ? "Computer wins!"
-    : playerOne === "scissors" && computer === "rock"
-    ? "Computer wins!"
-    : "playerOne wins !";
-console.log(result);
+// let result =
+//   playerOne === computer
+//     ? "Tie game!"
+//     : playerOne === "rock" && computer === "paper"
+//     ? "Computer wins!"
+//     : playerOne === "paper" && computer === "scissors"
+//     ? "Computer wins!"
+//     : playerOne === "scissors" && computer === "rock"
+//     ? "Computer wins!"
+//     : "playerOne wins !";
+// console.log(result);
+
+//USER INPUT
+
+// let myBoolean = confirm("Ok === True\nCancel === False");
+
+// console.log(myBoolean);
+
+let name = prompt("Please enter your name.");
+if (name) {
+  console.log(name);
+} else {
+  console.log("You didn't enter your name ");
+}
