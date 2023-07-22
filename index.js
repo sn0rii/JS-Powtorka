@@ -242,12 +242,12 @@
 // console.log(toProperCase("wOjTeK"));
 
 // ARRAYS //
-const myArrayA = ["A", "B", "C"];
-const myArrayB = ["D", "E", "F"];
+// const myArrayA = ["A", "B", "C"];
+// const myArrayB = ["D", "E", "F"];
 
-const newArray = [...myArrayA, ...myArrayB];
+// const newArray = [...myArrayA, ...myArrayB];
 
-console.log(newArray);
+// console.log(newArray);
 
 // const newString = myArray.join();
 
@@ -283,3 +283,19 @@ console.log(newArray);
 
 // myArray.splice(1, 1);
 // console.log(myArray);
+
+// OBJECTS //
+
+const myObj = { name: "Wojtek" };
+
+const anotherObj = {
+  alive: true,
+  answer: 32,
+  hobbies: ["Eat", "Sleep", "Code"],
+  beverage: {
+    morning: "Coffee",
+    afternoon: "Green Tea",
+  },
+};
+
+console.log(anotherObj.alive);
