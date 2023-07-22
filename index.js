@@ -242,7 +242,22 @@
 // console.log(toProperCase("wOjTeK"));
 
 // ARRAYS //
-const myArray = ["A", "B", "C", "D"];
+const myArrayA = ["A", "B", "C"];
+const myArrayB = ["D", "E", "F"];
+
+const newArray = [...myArrayA, ...myArrayB];
+
+console.log(newArray);
+
+// const newString = myArray.join();
+
+// const newArray = newString.split(",");
+
+// console.log(newArray);
+
+// const newArray = myArray.slice(2, 5);
+
+// console.log(newArray);
 
 // myArray[0] = "wojtek";
 // myArray[1] = 1;
