@@ -229,3 +229,8 @@
 // }
 
 // console.log(sum(2));
+
+// const getUserNameFromEmail = (email) => {
+//   return email.slice(0, email.indexOf("@"));
+// };
+// console.log(getUserNameFromEmail("ziomek@gmail.com"));
