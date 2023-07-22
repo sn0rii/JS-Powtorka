@@ -235,8 +235,36 @@
 // };
 // console.log(getUserNameFromEmail("ziomek@gmail.com"));
 
-const toProperCase = (name) => {
-  return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-};
+// const toProperCase = (name) => {
+//   return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+// };
 
-console.log(toProperCase("wOjTeK"));
+// console.log(toProperCase("wOjTeK"));
+
+// ARRAYS //
+const myArray = ["A", "B", "C", "D"];
+
+// myArray[0] = "wojtek";
+// myArray[1] = 1;
+// myArray[2] = false;
+
+// console.log(myArray);
+// console.log(myArray.length);
+// console.log(myArray[myArray.length - 1]);
+
+// myArray.push("witam");
+
+// console.log(myArray);
+// myArray.pop();
+
+// console.log(myArray);
+
+// myArray.unshift(42);
+
+// console.log(myArray);
+
+// myArray.shift();
+// console.log(myArray);
+
+// myArray.splice(1, 1);
+// console.log(myArray);

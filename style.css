@@ -226,3 +226,29 @@ and display:flex for the example you want to see. */
   padding: 0.75rem;
   border-radius: 10px;
 }
+
+/* PROJEKT
+
+.column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+} */
