@@ -302,3 +302,16 @@
 // };
 
 // console.log(anotherObj.action());
+
+const vehicle = {
+  wheels: 4,
+  engine: function () {
+    return "Bruuum";
+  },
+};
+
+const truck = Object.create(vehicle);
+truck.doors = 2;
+console.log(truck);
+console.log(truck.wheels); // Inheritance
+console.log(truck.engine());
