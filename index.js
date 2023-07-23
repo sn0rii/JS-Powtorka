@@ -286,19 +286,19 @@
 
 // OBJECTS //
 
-const myObj = { name: "Wojtek" };
+// const myObj = { name: "Wojtek" };
 
-const anotherObj = {
-  alive: true,
-  answer: 32,
-  hobbies: ["Eat", "Sleep", "Code"],
-  beverage: {
-    morning: "Coffee",
-    afternoon: "Green Tea",
-  },
-  action: function () {
-    return "Hello World";
-  },
-};
+// const anotherObj = {
+//   alive: true,
+//   answer: 32,
+//   hobbies: ["Eat", "Sleep", "Code"],
+//   beverage: {
+//     morning: "Coffee",
+//     afternoon: "Green Tea",
+//   },
+//   action: function () {
+//     return `Time for ${this.beverage.morning}`;
+//   },
+// };
 
-console.log(anotherObj.action());
+// console.log(anotherObj.action());
