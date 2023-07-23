@@ -332,9 +332,16 @@ const band = {
   drums: "John Bonham",
 };
 
-console.log(Object.keys(band));
-console.log(Object.values(band));
+//DESTRUCTING OBJECTS //
 
-for (let job in band) {
-  console.log(`On ${job}, it's ${band[job]}!`);
-}
+const { vocals, guitar, bass, drums } = band;
+
+console.log(vocals);
+console.log(bass);
+
+// console.log(Object.keys(band));
+// console.log(Object.values(band));
+
+// for (let job in band) {
+//   console.log(`On ${job}, it's ${band[job]}!`);
+// }
