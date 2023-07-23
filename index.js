@@ -303,24 +303,38 @@
 
 // console.log(anotherObj.action());
 
-const vehicle = {
-  wheels: 4,
-  engine: function () {
-    return "Bruuum";
-  },
+// const vehicle = {
+//   wheels: 4,
+//   engine: function () {
+//     return "Bruuum";
+//   },
+// };
+
+// const truck = Object.create(vehicle);
+// truck.doors = 2;
+// console.log(truck);
+// console.log(truck.wheels); // Inheritance
+// console.log(truck.engine());
+
+// const car = Object.create(vehicle);
+
+// car.doors = 4;
+// car.engine = function () {
+//   return "Whoooooo!";
+// };
+// console.log(car.engine());
+// console.log(car.wheels);
+
+const band = {
+  vocals: "Robert Plant",
+  guitar: "Jimmy Page",
+  bass: "John Paul Jones",
+  drums: "John Bonham",
 };
 
-const truck = Object.create(vehicle);
-truck.doors = 2;
-console.log(truck);
-console.log(truck.wheels); // Inheritance
-console.log(truck.engine());
+console.log(Object.keys(band));
+console.log(Object.values(band));
 
-const car = Object.create(vehicle);
-
-car.doors = 4;
-car.engine = function () {
-  return "Whoooooo!";
-};
-console.log(car.engine());
-console.log(car.wheels);
+for (let job in band) {
+  console.log(`On ${job}, it's ${band[job]}!`);
+}
