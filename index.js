@@ -296,6 +296,9 @@ const anotherObj = {
     morning: "Coffee",
     afternoon: "Green Tea",
   },
+  action: function () {
+    return "Hello World";
+  },
 };
 
-console.log(anotherObj.alive);
+console.log(anotherObj.action());
