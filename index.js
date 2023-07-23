@@ -315,3 +315,12 @@ truck.doors = 2;
 console.log(truck);
 console.log(truck.wheels); // Inheritance
 console.log(truck.engine());
+
+const car = Object.create(vehicle);
+
+car.doors = 4;
+car.engine = function () {
+  return "Whoooooo!";
+};
+console.log(car.engine());
+console.log(car.wheels);
