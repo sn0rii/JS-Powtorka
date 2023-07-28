@@ -365,17 +365,38 @@
 
 // getAllEmails();
 
-const getDadJoke = async () => {
-  const response = await fetch("https://icanhazdadjoke.com/", {
-    method: "GET",
-    headers: {
-      Accept: "application/json",
-    },
-  });
+// const getDadJoke = async () => {
+//   const response = await fetch("https://icanhazdadjoke.com/", {
+//     method: "GET",
+//     headers: {
+//       Accept: "application/json",
+//     },
+//   });
 
-  const jsonJokeData = await response.json();
+//   const jsonJokeData = await response.json();
 
-  console.log(jsonJokeData);
+//   console.log(jsonJokeData);
+// };
+
+// getDadJoke();
+
+const jokeObject = {
+  id: "6MZobUfVKuc",
+  joke: "I just read a book about Stockholm syndrome. It was pretty bad at first, but by the end I liked it.",
 };
 
-getDadJoke();
+const postData = async (jokeObj) => {
+  const response = await fetch("https://httpbin.org/post", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(jokeObj),
+  });
+
+  const jsonResponse = await response.json();
+
+  console.log(jsonResponse);
+};
+
+postData(jokeObject);
