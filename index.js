@@ -325,19 +325,19 @@
 // console.log(car.engine());
 // console.log(car.wheels);
 
-const band = {
-  vocals: "Robert Plant",
-  guitar: "Jimmy Page",
-  bass: "John Paul Jones",
-  drums: "John Bonham",
-};
+// const band = {
+//   vocals: "Robert Plant",
+//   guitar: "Jimmy Page",
+//   bass: "John Paul Jones",
+//   drums: "John Bonham",
+// };
 
 //DESTRUCTING OBJECTS //
 
-const { vocals, guitar, bass, drums } = band;
+// const { vocals, guitar, bass, drums } = band;
 
-console.log(vocals);
-console.log(bass);
+// console.log(vocals);
+// console.log(bass);
 
 // console.log(Object.keys(band));
 // console.log(Object.values(band));
@@ -345,3 +345,22 @@ console.log(bass);
 // for (let job in band) {
 //   console.log(`On ${job}, it's ${band[job]}!`);
 // }
+
+// ASYNC JS //
+
+const getAllEmails = async () => {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const jsonUserData = await response.json();
+
+  const userEmail = jsonUserData.map((user) => {
+    return user.email;
+  });
+
+  postToWebPage(userEmail);
+};
+
+postToWebPage = (data) => {
+  console.log(data);
+};
+
+getAllEmails();
