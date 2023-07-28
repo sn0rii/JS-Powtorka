@@ -401,14 +401,27 @@
 
 // postData(jokeObject);
 
-const requestJoke = async (firstName, lastName) => {
-  const response = await fetch(
-    `http://api.icndb.com/jokes/random?fristName=${firstName}&lastName=${lastName}`
-  );
-
-  const jsonResponse = await response.json();
-
-  console.log(jsonResponse.value);
+const getDataFromForm = () => {
+  const requestObj = {
+    firstName: "Bruce",
+    lastName: "Lee",
+    categories: ["nerdy"],
+  };
+  return requestObj;
 };
 
-requestJoke("Wojtek", "Klops");
+const buildRequestUrl = (requestData) => {
+  return `http://api.icndb.com/jokes/random?fristName=${requestData.firstName}&lastName=${requestData.lastName}`;
+};
+
+const requestJoke = async (url) => {
+  const response = await fetch(url);
+  const jsonResponse = await response.json();
+  const joke = jsonResponse.value.joke;
+  postJokeToPage(joke);
+  console.log(joke);
+};
+
+const postJokeToPage = (joke) => {
+  console.log(joke);
+};
