@@ -431,3 +431,5 @@ const processJokeRequest = async () => {
   await requestJoke(requestUrl);
   console.log("finished!");
 };
+
+processJokeRequest();
