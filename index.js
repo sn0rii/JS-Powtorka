@@ -419,9 +419,15 @@ const requestJoke = async (url) => {
   const jsonResponse = await response.json();
   const joke = jsonResponse.value.joke;
   postJokeToPage(joke);
-  console.log(joke);
 };
 
 const postJokeToPage = (joke) => {
   console.log(joke);
+};
+
+const processJokeRequest = async () => {
+  const requestData = getDataFromForm();
+  const requestUrl = buildRequestUrl(requestData);
+  await requestJoke(requestUrl);
+  console.log("finished!");
 };
