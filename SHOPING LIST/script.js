@@ -47,4 +47,10 @@
 // query selector all
 
 const listItem = document.querySelectorAll(".item");
-console.log(listItem[1]);
+console.log(listItem[1].innerText);
+
+// listItem[1].style.color = "red";
+
+listItem.forEach((item) => {
+  item.style.color = "red";
+});
