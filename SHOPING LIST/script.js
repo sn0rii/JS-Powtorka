@@ -69,20 +69,20 @@ const listItem = document.querySelectorAll(".item");
 //   }
 // });
 
-const listItems2 = document.getElementsByClassName("item");
+// const listItems2 = document.getElementsByClassName("item");
 
 // console.log(listItems2[2].innerText);
 
-const listItemsArray = Array.from(listItems2);
+// const listItemsArray = Array.from(listItems2);
 
 // console.log(listItemsArray);
 
-listItemsArray.forEach((item) => {
-  console.log(item.innerText);
-});
+// listItemsArray.forEach((item) => {
+//   console.log(item.innerText);
+// });
 
-const listItems3 = document.getElementsByTagName("li");
-console.log(listItems3[0]);
+// const listItems3 = document.getElementsByTagName("li");
+// console.log(listItems3[0]);
 
 // const witek = {
 //   name: "wojtek",
@@ -93,3 +93,16 @@ console.log(listItems3[0]);
 
 // const wojtekLista = Object.values(witek);
 // console.log(wojtekLista);
+
+const div = document.createElement("div");
+div.className = "my-element";
+div.id = "my-element";
+div.setAttribute("title", "My Element");
+
+// div.innerText = "Hello World";
+const text = document.createTextNode("Hello 2");
+div.appendChild(text);
+
+document.querySelector("ul").appendChild(div);
+
+console.log(div);
