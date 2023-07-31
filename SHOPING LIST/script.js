@@ -179,47 +179,90 @@ const listItem = document.querySelectorAll(".item");
 
 // insertAfter(li, firstItem);
 
-function replaceFirstItem() {
-  const firstItem = document.querySelector("li:first-child");
+//REPLACED
 
-  const li = document.createElement("li");
-  li.textContent = "Replaced First";
+// function replaceFirstItem() {
+//   const firstItem = document.querySelector("li:first-child");
 
-  firstItem.replaceWith(li);
+//   const li = document.createElement("li");
+//   li.textContent = "Replaced First";
+
+//   firstItem.replaceWith(li);
+// }
+
+// function replaceSecondItem() {
+//   const secondItem = document.querySelector("li:nth-child(2)");
+//   secondItem.outerHTML = "<li>Replaced Second </li>";
+// }
+
+// function replaceAllItems() {
+//   const lis = document.querySelectorAll("li");
+// lis.forEach((item, index) => {
+//   // item.outerHTML = "<li>Replaced All </li>";
+
+//   if (index === 1) {
+//     item.innerHTML = "Replace this";
+//   } else item.innerHTML = "Replace 2";
+// });
+
+//   lis.forEach(
+//     (item, index) =>
+//       (item.outerHTML = index === 1 ? "<li>Second Items</li>" : "<li>Item</li>")
+//   );
+// }
+
+// function replaceChildHeading() {
+//   const header = document.querySelector("header");
+//   const h1 = document.querySelector("header h1");
+
+//   const h2 = document.createElement("h2");
+//   h2.id = "app-title";
+//   h2.textContent = "Shopping List 2";
+//   header.replaceChild(h2, h1);
+// }
+
+// replaceFirstItem();
+// replaceSecondItem();
+// replaceAllItems();
+// replaceChildHeading();
+
+//REMOVE ELEMENTS
+
+function removeClearButton() {
+  const clearBtn = document.querySelector("#clear");
+  clearBtn.remove();
+}
+function removeFirstElement() {
+  const ul = document.querySelector("ul");
+  const li = document.querySelector("li:first-child");
+
+  ul.removeChild(li);
 }
 
-function replaceSecondItem() {
-  const secondItem = document.querySelector("li:nth-child(2)");
-  secondItem.outerHTML = "<li>Replaced Second </li>";
+function removeItem(itemNumber) {
+  const ul = document.querySelector("ul");
+  const li = document.querySelector(`li:nth-child(${itemNumber})`);
+
+  ul.removeChild(li);
+}
+function removeItem2(itemNumber) {
+  const ul = document.querySelector("ul");
+  const li = document.querySelectorAll("li")[itemNumber - 1];
+
+  ul.removeChild(li);
 }
 
-function replaceAllItems() {
-  const lis = document.querySelectorAll("li");
-  // lis.forEach((item, index) => {
-  //   // item.outerHTML = "<li>Replaced All </li>";
-
-  //   if (index === 1) {
-  //     item.innerHTML = "Replace this";
-  //   } else item.innerHTML = "Replace 2";
-  // });
-
-  lis.forEach(
-    (item, index) =>
-      (item.outerHTML = index === 1 ? "<li>Second Items</li>" : "<li>Item</li>")
-  );
+function removeItem3(itemNumber) {
+  const li = document.querySelectorAll("li");
+  li[itemNumber - 1].remove();
 }
 
-function replaceChildHeading() {
-  const header = document.querySelector("header");
-  const h1 = document.querySelector("header h1");
+const removeItem4 = (itemNumber) =>
+  document.querySelectorAll("li")[itemNumber - 1].remove();
 
-  const h2 = document.createElement("h2");
-  h2.id = "app-title";
-  h2.textContent = "Shopping List 2";
-  header.replaceChild(h2, h1);
-}
-
-replaceFirstItem();
-replaceSecondItem();
-replaceAllItems();
-replaceChildHeading();
+removeClearButton();
+// removeFirstElement();
+// removeItem(2);
+// removeItem2();
+// removeItem3(3);
+removeItem4(2);
