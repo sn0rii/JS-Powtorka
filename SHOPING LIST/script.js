@@ -139,31 +139,42 @@ const listItem = document.querySelectorAll(".item");
 // createListItem("Eggs");
 // createNewItem("Cheese");
 
-function createNewItem(item) {
-  const li = document.createElement("li");
-  li.appendChild(document.createTextNode(item));
+// function createNewItem(item) {
+//   const li = document.createElement("li");
+//   li.appendChild(document.createTextNode(item));
 
-  const button = createButton("remove-item btn-link text-red");
+//   const button = createButton("remove-item btn-link text-red");
 
-  li.appendChild(button);
+//   li.appendChild(button);
 
-  document.querySelector(".items").appendChild(li);
+//   document.querySelector(".items").appendChild(li);
 
-  function createButton(classes) {
-    const button = document.createElement("button");
-    button.className = classes;
+//   function createButton(classes) {
+//     const button = document.createElement("button");
+//     button.className = classes;
 
-    const icon = createIcon("fa-solid fa-xmark");
-    button.appendChild(icon);
+//     const icon = createIcon("fa-solid fa-xmark");
+//     button.appendChild(icon);
 
-    return button;
-  }
-  function createIcon(classes) {
-    const icon = document.createElement("i");
-    icon.className = classes;
-    return icon;
-  }
-}
+//     return button;
+//   }
+//   function createIcon(classes) {
+//     const icon = document.createElement("i");
+//     icon.className = classes;
+//     return icon;
+//   }
+// }
 
-createNewItem("Cheese");
-createNewItem("Sausage");
+// function insertAfter(newEl, existingEl) {
+//   existingEl.parentElement.insertBefore(newEl, existingEl.nextSibling);
+// }
+
+// const li = document.querySelector("li");
+// li.textContent = "Insert me after";
+
+// const firstItem = document.querySelector("li:first-child");
+
+// createNewItem("Cheese");
+// createNewItem("Sausage");
+
+// insertAfter(li, firstItem);
