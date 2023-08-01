@@ -46,7 +46,7 @@
 
 // query selector all
 
-const listItem = document.querySelectorAll(".item");
+// const listItem = document.querySelectorAll(".item");
 // console.log(listItem[1].innerText);
 
 // listItem[1].style.color = "red";
@@ -228,41 +228,72 @@ const listItem = document.querySelectorAll(".item");
 
 //REMOVE ELEMENTS
 
-function removeClearButton() {
-  const clearBtn = document.querySelector("#clear");
-  clearBtn.remove();
-}
-function removeFirstElement() {
-  const ul = document.querySelector("ul");
-  const li = document.querySelector("li:first-child");
+// function removeClearButton() {
+//   const clearBtn = document.querySelector("#clear");
+//   clearBtn.remove();
+// }
+// function removeFirstElement() {
+//   const ul = document.querySelector("ul");
+//   const li = document.querySelector("li:first-child");
 
-  ul.removeChild(li);
-}
+//   ul.removeChild(li);
+// }
 
-function removeItem(itemNumber) {
-  const ul = document.querySelector("ul");
-  const li = document.querySelector(`li:nth-child(${itemNumber})`);
+// function removeItem(itemNumber) {
+//   const ul = document.querySelector("ul");
+//   const li = document.querySelector(`li:nth-child(${itemNumber})`);
 
-  ul.removeChild(li);
-}
-function removeItem2(itemNumber) {
-  const ul = document.querySelector("ul");
-  const li = document.querySelectorAll("li")[itemNumber - 1];
+//   ul.removeChild(li);
+// }
+// function removeItem2(itemNumber) {
+//   const ul = document.querySelector("ul");
+//   const li = document.querySelectorAll("li")[itemNumber - 1];
 
-  ul.removeChild(li);
-}
+//   ul.removeChild(li);
+// }
 
-function removeItem3(itemNumber) {
-  const li = document.querySelectorAll("li");
-  li[itemNumber - 1].remove();
-}
+// function removeItem3(itemNumber) {
+//   const li = document.querySelectorAll("li");
+//   li[itemNumber - 1].remove();
+// }
 
-const removeItem4 = (itemNumber) =>
-  document.querySelectorAll("li")[itemNumber - 1].remove();
+// const removeItem4 = (itemNumber) =>
+//   document.querySelectorAll("li")[itemNumber - 1].remove();
 
-removeClearButton();
+// removeClearButton();
 // removeFirstElement();
 // removeItem(2);
 // removeItem2();
 // removeItem3(3);
-removeItem4(2);
+// removeItem4(2);
+
+///////
+
+const clearBtn = document.querySelector("#clear");
+
+function onClear() {
+  const itemList = document.querySelector("ul");
+  const items = document.querySelectorAll("li");
+
+  //   itemList.innerHTML = "";
+
+  items.forEach((item) => item.remove());
+}
+
+// JS event listener
+
+// clearBtn.onclick = function () {
+//   alert("Clear Items");
+// };
+
+//addEventListener
+
+// clearBtn.addEventListener("click", () => alert("clear list"));
+
+// clearBtn.addEventListener("click", () => console.log("clear list"));
+
+clearBtn.addEventListener("click", onClear);
+
+// setTimeout(() => clearBtn.removeEventListener("click", onClear), 5000);
+
+// setTimeout(() => clearBtn.click(), 5000);
