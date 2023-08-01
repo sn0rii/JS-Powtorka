@@ -334,32 +334,73 @@
 // logo.addEventListener("drag", onDrag);
 // logo.addEventListener("dragend", onDragEnd);
 
-const logo = document.querySelector("img");
+// const logo = document.querySelector("img");
 
-function onClick(e) {
-  //   console.log(e.target);
-  //   console.log(e.currentTarget);
-  //   e.target.style.backgroundColor = "red";
-  //   console.log(e.type);
-  //   console.log(e.timeStamp);
-  //   console.log(e.clientX);
-  //   console.log(e.clientY);
-  //   console.log(e.offsetX);
-  //   console.log(e.offsetY);
-  //   console.log(e.pageX);
-  //   console.log(e.pageY);
-  //   console.log(e.screenX);
-  //   console.log(e.screenY);
-}
+// function onClick(e) {
+//   console.log(e.target);
+//   console.log(e.currentTarget);
+//   e.target.style.backgroundColor = "red";
+//   console.log(e.type);
+//   console.log(e.timeStamp);
+//   console.log(e.clientX);
+//   console.log(e.clientY);
+//   console.log(e.offsetX);
+//   console.log(e.offsetY);
+//   console.log(e.pageX);
+//   console.log(e.pageY);
+//   console.log(e.screenX);
+//   console.log(e.screenY);
+// }
+// function onDrag(e) {
+//   document.querySelector("h1").textContent = `X ${e.clientX} Y ${e.clientY}`;
+// }
 
-function onDrag(e) {
-  document.querySelector("h1").textContent = `X ${e.clientX} Y ${e.clientY}`;
-}
+// logo.addEventListener("click", onClick);
+// logo.addEventListener("drag", onDrag);
 
-logo.addEventListener("click", onClick);
-logo.addEventListener("drag", onDrag);
+// document.querySelector("a").addEventListener("click", function (e) {
+//   e.preventDefault();
+//   console.log("Link was clicked");
+// });
 
-document.querySelector("a").addEventListener("click", function (e) {
-  e.preventDefault();
-  console.log("Link was clicked");
-});
+const itemInput = document.getElementById("item-input");
+
+// const onKeyPress = (e) => {
+//   console.log("keypress");
+// };
+// const onKeyUp = (e) => {
+//   console.log("key up");
+// };
+const onKeyDown = (e) => {
+  //key
+  //   if (e.key === "Enter") {
+  //     alert("you press enter");
+  //   }
+  //   document.querySelector("h1").innerText = e.key;
+  //keyCode
+  if (e.keyCode === 13) {
+    alert("You press Enter");
+  }
+
+  //code
+  if (e.code === "Digit1") {
+    alert("You press 1");
+  }
+
+  if (e.repeat) {
+    console.log("You are holding down " + e.key);
+  }
+
+  console.log("Shift: " + e.shiftKey);
+  console.log("Alt: " + e.altKey);
+  console.log("Ctrl: " + e.ctrlKey);
+
+  if (e.shiftKey && e.key === "K") {
+    console.log("You hit shift + K");
+  }
+};
+
+// itemInput.addEventListener("keypress", onKeyPress)
+// itemInput.addEventListener("keyup", onKeyUp);
+
+itemInput.addEventListener("keydown", onKeyDown);
