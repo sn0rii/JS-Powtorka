@@ -405,34 +405,77 @@
 
 // itemInput.addEventListener("keydown", onKeyDown);
 
-const itemInput = document.getElementById("item-input");
-const priorityInput = document.getElementById("priority-input");
-const checkbox = document.getElementById("checkbox");
-const heading = document.querySelector("h1");
+////////
+// INPUT ELEMENTS
+////////
 
-const onInput = (e) => {
-  heading.textContent = e.target.value;
+// const itemInput = document.getElementById("item-input");
+// const priorityInput = document.getElementById("priority-input");
+// const checkbox = document.getElementById("checkbox");
+// const heading = document.querySelector("h1");
+
+// const onInput = (e) => {
+//   heading.textContent = e.target.value;
+// };
+
+// const onCheck = (e) => {
+//   const isChecked = e.target.checked;
+//   heading.textContent = isChecked ? "Checked" : "Not Checked";
+// };
+
+// const onFocus = (e) => {
+//   console.log("input is focus");
+//   itemInput.style.outlineStyle = "solid";
+//   itemInput.style.outlineWidth = "3px";
+//   itemInput.style.outlineColor = "green";
+// };
+
+// const onBlur = (e) => {
+//   console.log("input is not focused");
+//   itemInput.style.outlineStyle = "none";
+// };
+
+// itemInput.addEventListener("input", onInput);
+// priorityInput.addEventListener("change", onInput);
+// checkbox.addEventListener("input", onCheck);
+// itemInput.addEventListener("focus", onFocus);
+// itemInput.addEventListener("blur", onBlur);
+
+//  FORM SUBMISSION & FORM OBJECT
+
+const form = document.getElementById("item-form");
+
+const onSubmit = (e) => {
+  e.preventDefault();
+
+  const item = document.getElementById("item-input").value;
+  const priority = document.getElementById("priority-input").value;
+
+  if (item === "" || priority === "0") {
+    alert("PLease fill in all fields");
+    return;
+  }
+
+  console.log(item, priority);
 };
 
-const onCheck = (e) => {
-  const isChecked = e.target.checked;
-  heading.textContent = isChecked ? "Checked" : "Not Checked";
+const onSubmit2 = (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  // console.log(formData);
+
+  const item = formData.get("item");
+  const priority = formData.get("priority");
+
+  const entries = formData.entries();
+  // console.log(entries);
+
+  for (let entry of entries) {
+    console.log(entry[1]);
+  }
+
+  // console.log(item, priority);
 };
 
-const onFocus = (e) => {
-  console.log("input is focus");
-  itemInput.style.outlineStyle = "solid";
-  itemInput.style.outlineWidth = "3px";
-  itemInput.style.outlineColor = "green";
-};
-
-const onBlur = (e) => {
-  console.log("input is not focused");
-  itemInput.style.outlineStyle = "none";
-};
-
-itemInput.addEventListener("input", onInput);
-priorityInput.addEventListener("change", onInput);
-checkbox.addEventListener("input", onCheck);
-itemInput.addEventListener("focus", onFocus);
-itemInput.addEventListener("blur", onBlur);
+form.addEventListener("submit", onSubmit2);
